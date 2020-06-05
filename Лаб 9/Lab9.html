@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+
+<style type="text/css">
+#head{
+position: relative;
+height:100px;
+width: 100%;
+}
+
+body{
+background: url('bg.png');
+background-repeat:no-repeat;
+height: 450px;
+width: 100%;
+}
+
+.image{
+	display: flex;
+flex-direction: row;
+justify-content: center;
+align-items  : center;
+padding: 20px;
+height: 350px;
+}
+
+.flex{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+padding: 5px;
+
+}
+    .round1 {
+    width: 25px;
+	height: 25px;
+    background:  #3dc9b3; /* Цвет фона */
+    border-radius: 50%; /* Параметры рамки */
+    padding: 10px; /* Поля вокруг текста */
+    margin-bottom: 1px; /* Отступ снизу */
+	padding: 20px;
+   }
+   
+#flexform{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-right: auto;
+margin-left: auto;
+position: relative;
+}
+
+.input{
+height: 40px;
+width: 250px;
+background-color: transparent;
+color: white;
+font-size: 18px;
+
+}
+
+p{
+color: white;
+font-family: 'PT Sans Caption', sans-serif;
+}
+
+#button {
+background-color: #3dc9b3;
+border: none;
+color: white;
+height: 46px;
+bottom: 1px;
+position: relative;
+width: 70px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+font-family: 'PT Sans Caption', sans-serif;
+}
+
+.error{
+border: 3px solid red;
+}
+
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&f.." rel="stylesheet">
+
+
+<div id = "head"></div>
+<div id = "backgroundImage">
+
+<div class = "flex">
+<img src="telegram.png">
+</div>
+
+<div class = "flex">
+<p>SUBSCRIBE TO STAY IN THE LOOP</p>
+</div>
+
+<div class = "flex">
+<div id = "flexForm">
+<form>
+<input type="text" name="email" id="input" class = "input">
+<button id = "button">SEND</button>
+</form>
+</div>
+</div>
+</div>
+<div class="image" >
+<p>
+	<img id="1"  src="1.png" class="round1" hspace="10" > 
+</div>
+<script type="text/javascript">
+
+document.querySelector('input').value = localStorage.getItem('email');
+
+let form = document.forms[0];
+form.email.onchange = function(){
+let removeSpaces = form.email.value.replace(/ /g,"");
+let trues = document.getElementById('input').value;
+if(/[-.\w]+@([\w-]+\.)+[\w-]+/g.test(form.email.value) === true){
+
+localStorage.setItem("email", trues);
+
+console.log("true");
+}
+
+else{
+
+input.classList.add("error");
+
+console.log("false");
+}
+
+}
+</script>
+
+</body>
+</html>

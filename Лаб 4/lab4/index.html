@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+</head>
+<body>
+<body bgcolor="white">
+<style>
+.image{
+	display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+
+}
+.image2{
+	display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items  : center;
+
+}
+
+.paragraph{
+	display: flex;
+flex-direction: row;
+justify-content: space-around;
+font-family: 'Cinzel',sans-serif;
+text-transform:uppercase;
+color:#353535;
+}
+
+.text{
+	display: flex;
+flex-direction: row;
+	font-family: 'Baloo',sans-serif;
+	white-space: normal;
+text-align: center;
+color: #8c9398;
+font-size: 17px;
+font-weight: 50px;
+}
+
+#rectangle {
+	width: 50px;
+	height: 5px;
+	background:#3dc9b3;
+}
+   .round {
+    width: 25px;
+	height: 25px;
+    background:  #23272f; /* Цвет фона */
+    border-radius: 50%; /* Параметры рамки */
+    padding: 10px; /* Поля вокруг текста */
+    margin-bottom: 1px; /* Отступ снизу */
+   }
+      .round1 {
+    width: 25px;
+	height: 25px;
+    background:  #3dc9b3; /* Цвет фона */
+    border-radius: 50%; /* Параметры рамки */
+    padding: 10px; /* Поля вокруг текста */
+    margin-bottom: 1px; /* Отступ снизу */
+   }
+.hr-dotted {
+content: "▼";
+	margin: 20px 0;
+	padding: 0;
+	height: 0;
+	border: none;
+	border-top: 2px dotted #ddd;
+{
+
+	</style>
+
+	<link rel="stylesheet" type="text/css" link href="http://help-ru.tilda.ws/fontsgoogle">
+
+	<link href="http://help-ru.tilda.ws/fontsgoogle" rel="stylesheet">
+
+
+<br/>
+<header><h3 class="paragraph" color: #353535>We`re a team that adore what we do</h3></header>
+<hr class="hr-dotted">
+ 
+<br/>
+<div class="image">
+	<img id="John" src="John.png">
+	<img id="Cersei" src="Cersei.png">
+	<img id="Janei" src="Janei.png">
+</div>
+<div class="paragraph">
+	<h4>John Snow</h4>
+	<h4>Cersei Lannister </h4>
+	<h4>Janei Lannister</h4>
+</div>
+<div class="image">
+<div id="rectangle"></div>
+<div id="rectangle"></div>
+<div id="rectangle"></div>
+</div>
+
+<div class="text">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
+</div>
+<script>
+        let John = document.getElementById("John");
+		let Cersei = document.getElementById("Cersei");
+		let Janei = document.getElementById("Janei");
+	function myJohn(){
+			alert("John");
+	}
+	John.addEventListener('click', myJohn);
+
+	function myCersei(){
+			alert("Cersei");
+	}
+	Cersei.addEventListener('click', myCersei);
+
+	function myJanei(){
+			alert("Janei ");
+	}
+	Janei.addEventListener('click', myJanei);
+</script>
+
+<div class="image2" >
+<p>
+	<img id="vk"  src="vk.png" class="round1" hspace="10" > 
+	<img id="twitter" src="twitter.png" class="round" hspace="10"  >
+	<img id="mail" src="mail.png"  class="round" hspace="10"></p>
+<p>
+	<img id="vk"  src="vk.png" class="round" hspace="10" > 
+	<img id="twitter" src="twitter.png" hspace="10" class="round">
+	<img id="mail" src="mail.png"  hspace="10" class="round"></p>
+	<p>
+	<img id="vk"  src="vk.png" class="round" hspace="10" > 
+	<img id="twitter" src="twitter.png" hspace="10" class="round">
+	<img id="mail" src="mail.png"  hspace="10" class="round"></p>
+</div>
+
+<script>
+        let vk = document.getElementById("vk");
+		let twitter = document.getElementById("twitter");
+		let mail = document.getElementById("mail");
+		
+	function myvk(){
+			alert("http://vk.ru");
+	}
+	vk.addEventListener('click', myvk);
+
+	function mytwitter(){
+			alert("http://twitter.com");
+	}
+	twitter.addEventListener('click', mytwitter);
+
+	function mymail(){
+			alert("http://mail.ru");
+	}
+	mail.addEventListener('click', mymail);
+</script>
+
+</body>
+</html>

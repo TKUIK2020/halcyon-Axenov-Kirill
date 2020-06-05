@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+<style type="text/css">
+
+
+body{
+background-color:#f3f5f8;
+}
+
+#backgroundImage{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+background: url(bg.png) no-repeat;
+height: 100vh;
+width: 100%;
+}
+
+.image{
+	display: flex;
+flex-direction: row;
+justify-content: center;
+align-items  : center;
+padding: 20px;
+height: 150px;
+}
+
+#nav{
+position: relative;
+left: 85%;
+top: 5%;
+transform: translate(-85%, 0);
+background-image: url(mobile_nav.png);
+height: 25px;
+width: 30px;
+}
+
+.flex{
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+top: 20%;
+height: 120px;
+}
+
+h1{
+font-family: 'Rajdhani', sans-serif;
+letter-spacing: 15px;
+font-size: 40px;
+text-align: center;
+}
+#paragraph{
+color: #a1a9b0;
+font-family: 'PT Sans Caption', sans-serif;
+font-size: 15px;
+letter-spacing: 2px;
+text-align: center;
+}
+#paragraph1{
+width: 900px;
+color: #000000;
+text-align: center;
+position: relative;
+top: 140px;
+color: #a1a9b0;
+font-family: 'PT Sans Caption', sans-serif;
+}
+
+h3{font-family: 'Rajdhani', sans-serif;
+letter-spacing: 2px;
+font-size: 15px;
+text-align: center;
+position: relative;
+top: 100px;
+}
+#p{color: #ffffff;
+font-family: 'PT Sans Caption', sans-serif;
+font-size: 15px;
+letter-spacing: 2px;
+text-align: center;}
+
+}
+#colorDays{
+color: #a1a9b0;
+}
+#img{
+height: 24px;
+width: 500px;
+position: relative;
+position: relative;
+top: 120px;
+
+}
+#button{
+width: 170px;
+height: 50px;
+background-color: #3cc9b2;
+position: relative;
+top: 50%;
+
+}
+#black{
+color: black;
+}
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&f.." rel="stylesheet">
+
+<div id="backgroundImage">
+
+
+<button id = "nav"></button>
+
+<div class="flex">
+
+<div class = "flex">
+<h1>HALCYON<span id = "colorDays">DAYS</span></h1>
+</div>
+
+<div class = "flex">
+<p id = "paragraph">An exclusive HTML5/CSS3 freebie by Peter Finlan,for <b><i>Codrops</i></b></p>
+</div>
+
+<div class = "flex">
+<button id ="button"><p id = "p">LEARN MORE</p></button>
+</div>
+
+</div>
+</div>
+<br/>
+<div class = "flex">
+<h3>A CREATIVE PORTFOLIO TEMPLATE</h3>
+</div>
+<div class="image" >
+<p>
+	<h2 style="color:#999999">............................................</h2>
+	<img id="2" src="2.png" align="middle" width= "15"	height= "15">
+	<h2 style="color:#999999">............................................</h2>
+</div>
+<div class="flex">
+<p class = "flex" id = "paragraph1">Sed a lorem quis neque interdum
+<span id ="black">consequat ut sed sem</span>
+.Duis quis tempor nunc. Interdum et malesuadafames
+ <br/>ac ante ipsum primis in faucibus. Praesent id tempor ipsum. Fusce at massa ac nunc porta
+ <br/>fringilla sed eget neque.Quisque quis pretium nulla. Fusce eget bibendum neque, vel volutpat augue.
+ <br/>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum
+ <br/>primis in faucibus.
+
+</p>
+</div>
+</div>
+
+<script type="text/javascript">
+
+let promise = fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+.then((response) => {
+return response.json();
+})
+.then((data) => {
+console.log('Успех:', data);
+})
+.catch((error) => {
+console.error('Ошибка:', error)
+});
+
+
+async function myFunction()
+{
+try{
+let response = await fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+let result = await response.json()
+console.log('Успех:', result)
+} catch(error){
+console.log('Ошибка:',error);
+}
+}
+myFunction();
+
+</script>
+
+</body>
+</html>

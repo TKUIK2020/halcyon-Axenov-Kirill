@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta charset = "Utf-8">
+<title>JS6</title>
+</head>
+<body>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&f.." rel="stylesheet">
+<div id = "header">
+<h2>I got 99 problem</h2><br/><br/>
+<h3>but <em><i>design</i></em> aint one</h3>
+</div>
+
+<div id = "divBackground">
+<div id = "flexImage">
+<img class = "omg" id="mind" src="img/mind.png">
+<img class = "omg" src="img/think.png">
+<img class = "omg" src="img/dog.png">
+
+</div>
+<div id="flexHead">
+<h4>Creativ minds</h4>
+<h4>Think alike</h4>
+<h4>Pixel perfection</h4>
+</div>
+
+<div class = "flexRectangle">
+<div id="rectangle"></div>
+<div id="rectangle"></div>
+<div id="rectangle"></div>
+</div>
+
+<div id="flexText">
+<p>Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nunc ultricies nulla non metus
+pulvinar imperdiet. Praesent non
+adipiscing libero
+</p>
+<p>Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nunc ultricies nulla non metus
+pulvinar imperdiet. Praesent non
+adipiscing libero
+</p>
+<p>Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nunc ultricies nulla non metus
+pulvinar imperdiet. Praesent non
+adipiscing libero
+</p>
+</div>
+</div>
+
+
+<footer class="footer-bg">
+	<div class= "block3" >
+	<button class= "cta-contact">
+IGNITE YOURE PASSION
+	</button>
+
+</div>
+</footer>
+<script>
+	let xhr=  new XMLHttpRequest( );
+	xhr.open('GET','https://jsonplaceholder.typicode.com/posts');
+ xhr.responseType = 'json';
+ xhr.send();
+ xhr.onprogress= function(event){
+ if (event.loaded<event.total){
+ alert('Loading ' + event.loaded+'/'+event.total)
+ } else{ alert('Done!')
+            }
+    };
+   /* var body = {
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+   } 
+  xhr.open('POST','https://jsonplaceholder.typicode.com/posts');
+   xhr.send(body);
+   xhr.onload=() =>alert(xhr.response);*/
+</script>
+
+
+</body>
+</html>

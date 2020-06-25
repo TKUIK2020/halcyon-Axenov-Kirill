@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset= "utf-8" />
+</head>
+<style>
+     body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(80, 220, 255);
+     }
+    button {
+        border: none;
+        height: 50px;
+        width: 100px;
+        border: 2px solid #000000;
+        padding: 16 px 32 px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15 px;
+        margin: 4 px 2 px;
+        transition-duration: 0,5 s;
+        cursor: pointer;
+        background-color: rgb(35, 182, 91); 
+        color: black; 
+        border: 2 px solid PaleGreen;
+    }
+    button:hover {
+        background-color: MediumSeaGreen;
+        color: rgb(40, 180, 94);}
+   
+</style>
+<body>
+    <div id="app">
+        <app-corgi></app-corgi>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        Vue.component('app-corgi',{
+            data:function(){
+                return{
+                    show: false   
+                }
+            }, template: `<div><p v-if="show"><img src="1.jpg" width="700px" height="500px"></p><p></p><button v-on:click="show=!show">{{show?'Скрыть':'Показать'}}</button></div>`
+        })
+        var app = new Vue({
+            el: '#app',
+        });
+    </script>
+</body>
+</html>
